@@ -8,7 +8,7 @@
 
 using namespace std;
 
-const char* arraySignos[] = {"CAPRICÓRNIO - 22/12 a 19/01", "AQUÁRIO - 20/01 a 18/02", "PEIXES - 19/02 a 20/03", "ÁRIES - 21/03 a 19/04", "TOURO - 20/04 a 20/05", "GÊMEOS - 21/05 a 21/06", "CÂNCER - 22/06 a 22/07", "LEÃO - 23/07 a 22/08", "VIRGEM - 23/08 a 22/09", "LIBRA - 23/09 a 22/10", "ESCORPIÃO - 23/10 a 21/11", "SAGITÁRIO - 22/11 a 21/12", "CAPRICÓRNIO - 22/12 a 19/01"};
+const char* arraySignos[] = {"CAPRICÃ“RNIO - 22/12 a 19/01", "AQUÃRIO - 20/01 a 18/02", "PEIXES - 19/02 a 20/03", "ÃRIES - 21/03 a 19/04", "TOURO - 20/04 a 20/05", "GÃŠMEOS - 21/05 a 21/06", "CÃ‚NCER - 22/06 a 22/07", "LEÃƒO - 23/07 a 22/08", "VIRGEM - 23/08 a 22/09", "LIBRA - 23/09 a 22/10", "ESCORPIÃƒO - 23/10 a 21/11", "SAGITÃRIO - 22/11 a 21/12", "CAPRICÃ“RNIO - 22/12 a 19/01"};
 
 void menuPrincipal(void);
 void criaArquivo(void);
@@ -33,14 +33,14 @@ void menuPrincipal(void){
 	while (opcMenuPrincipal > 3) {
 		limparTela();
 	 	cout << "" << endl;	
-		cout << "	----------- SIGNOS DO ZODÍACO -----------" << endl;
+		cout << "	----------- SIGNOS DO ZODÃACO -----------" << endl;
 		cout << "" << endl;
 		cout << "	0 - Cria arquivo com frases motivacionais" << endl;
-		cout << "	1 - Saber qual é o signo" << endl;
+		cout << "	1 - Saber qual Ã© o signo" << endl;
 		cout << "	2 - Frase motivacional do signo" << endl;
 		cout << "	3 - Sair" << endl;
 		cout << "" << endl;
-	    cout << "            *** Entre com uma das opções acima: ";
+	    cout << "            *** Entre com uma das opÃ§Ãµes acima: ";
 	    cin >> opcMenuPrincipal;
 	    
 	    switch (opcMenuPrincipal) {
@@ -77,7 +77,7 @@ void criaArquivo(void){
 		cout << "" << endl;
 		cout << "Entre com a frase motivacional para o signo de " << arraySignos[i] << endl;
 		cout << "" << endl;
-		cout << "[-----------------------------------Tamanho máximo de 100 posições-----------------------------------]	" << endl;
+		cout << "[-----------------------------------Tamanho mÃ¡ximo de 100 posiÃ§Ãµes-----------------------------------]	" << endl;
 		fflush(stdin); // limpa buffer
 		cin.ignore();
 		cin.getline(frase,sizeof frase);
@@ -85,7 +85,7 @@ void criaArquivo(void){
 		
 		tamanho = strlen(frase);
 		if(tamanho >= 100) {
-			cout << "\nATENÇÃO: a frase deve conter o máximo de 100 caracteres!";
+			cout << "\nATENÃ‡ÃƒO: a frase deve ter no mÃ¡ximo 100 caracteres!";
 			getch();
 			goto tamanhoExcedido;
 		}
@@ -106,7 +106,7 @@ void informaSigno(void){
 	cout << "			*** INFORMA O SIGNO ***" << endl;
 	cout << "" << endl;
 	cout << "" << endl;
-	cout << "Informe o dia e o mês que você nasceu (DDMM):	";
+	cout << "Informe o dia e o mÃªs que vocÃª nasceu (DDMM):	";
 	cin >> dataNascimento;
 	
 	diaNascimentoStr = dataNascimento.substr(0,2);
@@ -119,7 +119,7 @@ void informaSigno(void){
 		mesNascimentoInt = mesNascimentoInt - 1;
 	}
 		
-	cout << "\n==>> Você é do signo de *** " << arraySignos[mesNascimentoInt] << " ***" << endl;
+	cout << "\n==>> VocÃª Ã© do signo de *** " << arraySignos[mesNascimentoInt] << " ***" << endl;
 	getch();
 	menuPrincipal();
 }
@@ -133,16 +133,16 @@ void fraseMotivacional(void){
 	cout << "                   *** FRASE MOTIVACIONAL DO SIGNO ***" << endl;
 	cout << "" << endl;	
 	cout << "*---------------------------------------------------------------------------*" << endl;
-	cout << "!                             Signos do Zodíaco                             !" << endl;
+	cout << "!                             Signos do ZodÃ­aco                             !" << endl;
 	cout << "!                                                                           !" << endl;
-	cout << "!   (1) Capricórnio   (4) Áries         (7) Cancer        (10) Libra        !" << endl;
-	cout << "!   (2) Aquário       (5) Touro         (8) Leão          (11) Escorpião    !" << endl;
-	cout << "!   (3) Peixes        (6) Gêmeos        (9) Virgem        (12) Sargitário   !" << endl;
+	cout << "!   (1) CapricÃ³rnio   (4) Ãries         (7) Cancer        (10) Libra        !" << endl;
+	cout << "!   (2) AquÃ¡rio       (5) Touro         (8) LeÃ£o          (11) EscorpiÃ£o    !" << endl;
+	cout << "!   (3) Peixes        (6) GÃªmeos        (9) Virgem        (12) SargitÃ¡rio   !" << endl;
 	cout << "!                                                                           !" << endl;
 	cout << "*---------------------------------------------------------------------------*" << endl;
 	cout << "" << endl;	
 	cout << "" << endl;	
-	cout << "    Digite o número que representa o seu signo: ";
+	cout << "    Digite o nÃºmero que representa o seu signo: ";
 	cin >> opcFraseMotivacional;
 	
 	switch (opcFraseMotivacional){
@@ -182,7 +182,7 @@ void fraseMotivacional(void){
 		case 12:
 				pegaFrase("22");
 				break;
-		default: cout << "Opção Inválida!";
+		default: cout << "OpÃ§Ã£o InvÃ¡lida!";
 	}
 	getch();
 	menuPrincipal();
@@ -206,7 +206,7 @@ void pegaFrase(char idFrase[]){
 			}
 		};
 	} else {
-		cout << "\nO arquivo horoscopo.txt não foi encontrado.\nUse a opção 0 do menu principal para criar um novo aquivo." << endl;
+		cout << "\nO arquivo horoscopo.txt nÃ£o foi encontrado.\nUse a opÃ§Ã£o 0 do menu principal para criar um novo aquivo." << endl;
 	}
 }
 //---------------------------------------------------------------
